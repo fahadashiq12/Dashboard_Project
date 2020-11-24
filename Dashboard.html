@@ -3,11 +3,11 @@
     <head>      
          <!-- Required meta tags -->
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Raleway">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="main.css">
@@ -15,31 +15,96 @@
             Dashboard Project
         </title>
     </head>
-       <body class="container-fluid">
+
+    <body>
+        
+        <div class="wrapper">
+    
     <!--- Navbar -->
-       <div class="First_Section">
-        <div class="row nav-bg header-mobile-row">
+    <div class="container-fluid px-0">
+    <div class="First_Section">
+     <div class="row nav-bg header-mobile-row">
         <div class="col-md-12 co-12 header-mobile-col">
-        <nav class="navbar">
-        <a class="navbar-brand" href=""><img src="Img/Logo.png" alt="Header-Logo"></a>
-        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i class="fa fa-bars fa-1x"></i></span></button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-        <ul class="navbar-nav mr-auto">
-        <li class="nav-item active"> <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#">Services</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#">Courses</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#">Classes</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#">Quiz</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#">Pages</a> </li>
-        <li class="nav-item"> <a class="nav-link" href="#">Contact</a> </li>
-        </ul>
-        </div>
-        </nav>
-        hb niuygvbnjiuygvbniuygv moiuyg
+            <div class="container-fluid">
+
+            </div>
         </div>
        </div>
+     </div>
+       
+        <!-- Sidebar  -->
+        <nav id="sidebar" class="">
+            <div class="sidebar-header">
+                <h3>Bootstrap Sidebar</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Dummy Heading</p>
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">Home</a>
+                    <ul class="list-unstyled collapse" id="homeSubmenu" style="">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">Pages</a>
+                    <ul class="list-unstyled collapse" id="pageSubmenu" style="">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                </li>
+                <li>
+                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+                </li>
+            </ul>
+        </nav>
+    
     </div>
+  </div>
+</div>
+
+
+
+    
+    
+<script>
+    $(document).ready(function (){
+     $('#sidebarCollapse').on('click', function () {
+     $('#sidebar').toggleClass('active');
+  });
+  });
+ </script>
+
   <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
