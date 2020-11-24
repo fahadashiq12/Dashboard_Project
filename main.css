@@ -9,6 +9,62 @@
     margin: 0px;
 }
 
+
+.app-theme-white .app-footer .app-footer__inner, .app-theme-white .app-header {
+    background: #fafbfc;
+}
+
+.fixed-header .app-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.app-header.header-shadow {
+    box-shadow: 0 0.46875rem 2.1875rem rgba(4,9,20,0.03), 0 0.9375rem 1.40625rem rgba(4,9,20,0.03), 0 0.25rem 0.53125rem rgba(4,9,20,0.05), 0 0.125rem 0.1875rem rgba(4,9,20,0.03);
+}
+
+.app-header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    z-index: 10;
+    transition: all .2s;
+}
+
+.hamburger{
+padding: 0px 0px;
+display: inline-block;
+cursor: pointer;
+transition-property: opacity, filter;
+transition-duration: 0.15s;
+transition-timing-function: linear;
+font: inherit;
+color: inherit;
+text-transform: none;
+background-color: transparent;
+border: 0;
+margin: 0;
+overflow: visible;
+}
+
+.second_sec
+{
+    text-align: right;
+}
+
+.first_sec
+{
+    text-align: left;
+}
+
+.logo_style
+{
+    margin-bottom: 5px;
+}
+
 .container-fluid{
     overflow: hidden;
 }
