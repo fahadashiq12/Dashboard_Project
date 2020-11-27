@@ -11,18 +11,163 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
         <link rel="stylesheet" type="text/css" href="main.css">
       
+        <script>
+
+          window.onload = function () {
+          
+          var chart = new CanvasJS.Chart("chartContainer", {
+            animationEnabled: true,
+            title:{
+              text: "Monthly Expenses, 2016-17"
+            },
+            axisY :{
+              includeZero: false,
+              prefix: "$"
+            },
+            toolTip: {
+              shared: true
+            },
+            legend: {
+              fontSize: 13
+            },
+            data: [{
+              type: "splineArea",
+              showInLegend: true,
+              name: "Salaries",
+              yValueFormatString: "$#,##0",
+              xValueFormatString: "MMM YYYY",
+              dataPoints: [
+                { x: new Date(2016, 2), y: 30000 },
+                { x: new Date(2016, 3), y: 35000 },
+                { x: new Date(2016, 4), y: 30000 },
+                { x: new Date(2016, 5), y: 30400 },
+                { x: new Date(2016, 6), y: 20900 },
+                { x: new Date(2016, 7), y: 31000 },
+                { x: new Date(2016, 8), y: 30200 },
+                { x: new Date(2016, 9), y: 30000 },
+                { x: new Date(2016, 10), y: 33000 },
+                { x: new Date(2016, 11), y: 38000 },
+                { x: new Date(2017, 0),  y: 38900 },
+                { x: new Date(2017, 1),  y: 39000 }
+              ]
+             },
+            {
+              type: "splineArea", 
+              showInLegend: true,
+              name: "Office Cost",
+              yValueFormatString: "$#,##0",
+              dataPoints: [
+                { x: new Date(2016, 2), y: 20100 },
+                { x: new Date(2016, 3), y: 16000 },
+                { x: new Date(2016, 4), y: 14000 },
+                { x: new Date(2016, 5), y: 18000 },
+                { x: new Date(2016, 6), y: 18000 },
+                { x: new Date(2016, 7), y: 21000 },
+                { x: new Date(2016, 8), y: 22000 },
+                { x: new Date(2016, 9), y: 25000 },
+                { x: new Date(2016, 10), y: 23000 },
+                { x: new Date(2016, 11), y: 25000 },
+                { x: new Date(2017, 0), y: 26000 },
+                { x: new Date(2017, 1), y: 25000 }
+              ]
+             },
+            {
+              type: "splineArea", 
+              showInLegend: true,
+              name: "Entertainment",
+              yValueFormatString: "$#,##0",     
+              dataPoints: [
+                { x: new Date(2016, 2), y: 10100 },
+                { x: new Date(2016, 3), y: 6000 },
+                { x: new Date(2016, 4), y: 3400 },
+                { x: new Date(2016, 5), y: 4000 },
+                { x: new Date(2016, 6), y: 9000 },
+                { x: new Date(2016, 7), y: 3900 },
+                { x: new Date(2016, 8), y: 4200 },
+                { x: new Date(2016, 9), y: 5000 },
+                { x: new Date(2016, 10), y: 14300 },
+                { x: new Date(2016, 11), y: 12300 },
+                { x: new Date(2017, 0), y: 8300 },
+                { x: new Date(2017, 1), y: 6300 }
+              ]
+             },
+            {
+              type: "splineArea", 
+              showInLegend: true,
+              yValueFormatString: "$#,##0",      
+              name: "Maintenance",
+              dataPoints: [
+                { x: new Date(2016, 2), y: 1700 },
+                { x: new Date(2016, 3), y: 2600 },
+                { x: new Date(2016, 4), y: 1000 },
+                { x: new Date(2016, 5), y: 1400 },
+                { x: new Date(2016, 6), y: 900 },
+                { x: new Date(2016, 7), y: 1000 },
+                { x: new Date(2016, 8), y: 1200 },
+                { x: new Date(2016, 9), y: 5000 },
+                { x: new Date(2016, 10), y: 1300 },
+                { x: new Date(2016, 11), y: 2300 },
+                { x: new Date(2017, 0), y: 2800 },
+                { x: new Date(2017, 1), y: 1300 }
+              ]
+            }]
+          });
+          chart.render();  
+
+var options = {
+	animationEnabled: true,  
+	title:{
+		text: "Monthly Sales - 2017"
+	},
+	axisX: {
+		valueFormatString: "MMM"
+	},
+	axisY: {
+		title: "Sales (in USD)",
+		prefix: "$"
+	},
+	data: [{
+		yValueFormatString: "$#,###",
+		xValueFormatString: "MMMM",
+		type: "spline",
+		dataPoints: [
+			{ x: new Date(2017, 0), y: 25060 },
+			{ x: new Date(2017, 1), y: 27980 },
+			{ x: new Date(2017, 2), y: 33800 },
+			{ x: new Date(2017, 3), y: 49400 },
+			{ x: new Date(2017, 4), y: 40260 },
+			{ x: new Date(2017, 5), y: 33900 },
+			{ x: new Date(2017, 6), y: 48000 },
+			{ x: new Date(2017, 7), y: 31500 },
+			{ x: new Date(2017, 8), y: 32300 },
+			{ x: new Date(2017, 9), y: 42000 },
+			{ x: new Date(2017, 10), y: 52160 },
+			{ x: new Date(2017, 11), y: 49400 }
+		]
+	}]
+};
+  $("#chartContainer").CanvasJSChart(options);
+  }
+ 
+        </script>
+
+
         <title>
             Dashboard Project
         </title>
     </head>
 
     <body>
-      <div class="app-header">
-    <div class="container-fluid">
-      <div class="row header-shadow disflex">
-        <div class="col-lg-8 col-12">       
+
+    <!--- Header Section --->
+    <div class="app-header">
+      <div class="container-fluid">
+        <div class="row header-shadow disflex">
+         <div class="col-lg-8 col-12">       
           <div class="row">
             <img class="img_style" src="Img/Logo.png"> 
             <span class="icon1-style"><img src="Img/left.png" alt=""></span>    
@@ -59,17 +204,18 @@
         </div>
       </div>
     </div>
-      </div>
-
-<div class="container-fluid">
-  <div class="row">
+    </div>
+      
+    <!---- SideBar ---->  
+    <div class="container-fluid"> 
+    <div class="row">
     <div class="col-lg-2 col-12">
-      <div class="row">
-    <div class="col-lg-4 mt-3">
-         <span class="round32"> 
+          <div class="row">
+           <div class="col-lg-4 mt-3">
+           <span class="round32"> 
 
-         </span>
-         <small class="txt_style text-center">
+            </span>
+            <small class="txt_style text-center">
             T. JOBS LONKI 
           </small>
            <small class="txt_style text-center">
@@ -79,165 +225,256 @@
          <img class="icon_style" src="Img/Message Icon@1X.png">
          <img class="icon_style" src="Img/Layer 1344@1X.png">
          <img class="icon_style" src="Img/Settings Icon@1X.png">
-    </div>
-    <div class="col-lg-8 bg_grey">
-    <span class="">
-    
-    </span>
-    </div>
-    </div>
-  </div>
+         <img class="icon_style" src="Img/Monitor Icon@1X.png">
+         <img class="icon_style" src="Img/Message Icon@1X.png">
+         <img class="icon_style" src="Img/Layer 1344@1X.png">
+         <img class="icon_style" src="Img/Settings Icon@1X.png">
+         <img class="icon_style" src="Img/Layer 1344@1X.png">
+         <img class="icon_style" src="Img/Settings Icon@1X.png">
+         <img class="icon_style" src="Img/Layer 1344@1X.png">
+         <img class="icon_style" src="Img/Settings Icon@1X.png">
+         <img class="icon_style" src="Img/Settings Icon@1X.png">
+         <img class="icon_style" src="Img/Monitor Icon@1X.png"> 
+         </div>
+        <div class="col-lg-8 bg_grey">
 
-    <div class="col-lg-10 bg_grey">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3">
           <div class="row">
-           <div class="card">            
-             <div class="col-lg-2">
-              <div class="cardimg_style">
-               <img src="Img/Layer 1359@1X.png">
-              </div>
+            <span class="cal_style mt-4 ml-4">
+              <img src="Img/Calender Icon@1X.png">
+              <h5 class="ml-2 mt-2"> ALBERTA, CA </h5>
+              </span>
+             </div>  
+           </div>
+        </div>
+          </div>
+    <div class="col-lg-10 bg_grey">
+
+     
+    
+       <div class="container">
+        <div class="row">
+         <div class="col-lg-3 col-12 mb_bottom">    
+          <div class="row ml-1 mr-1">
+                 
+             <div class="col-lg-3 col-3 bg-white p-0 border_10 text-center">
+            
+            <img src="Img/first.png">
+          
              </div>
-             <div class="col-lg-10">
-                 <div class="">
-                  
-                 </div>
+             <div class="col-lg-9 col-9 bg_blue">
+             <div class="">              
+             </div>
+             </div>  
+
+          </div>
+          </div>
+     
+          <div class="col-lg-3 col-12 mb_bottom">
+           <div class="row ml-1 mr-1">                
+             <div class="col-lg-3  col-3 bg-white p-0 border_10 text-center">           
+              <img src="Img/first.png">         
+             </div>
+             <div class="col-lg-9 col-9 bg_blue">
+             <div class="">              
+             </div>
+             </div>                              
+          </div>
+          </div>
+
+          <div class="col-lg-3 col-12 mb_bottom">
+            <div class="row ml-1 mr-1">                
+              <div class="col-lg-3 col-3 bg-white p-0 border_10 text-center">            
+               <img src="Img/first.png">
               </div>
-            </div>
+              <div class="col-lg-9 col-9 bg_blue">
+              <div class="">              
+              </div>
+              </div>                                
            </div>
           </div>
-        
-          <div class="col-lg-3">
-            <div class="card">
-             
-              <div class="col-lg-2 cardimg_style">
-                <img src="Img/Finance_SME_Start_Up_Out_Line_53-512@1X.png">
-              </div>
-              <div class="col-lg-10">
-             
-               </div>
-             </div>
-        </div>
 
-          <div class="col-lg-3">
-            <div class="card">
+          <div class="col-lg-3 col-12 mb_bottom">
+            <div class="row ml-1 mr-1">
+                 
+              <div class="col-lg-3 col-3 bg-white p-0 border_10 text-center">
              
-              <div class="col-lg-2 cardimg_style">
-                <img src="Img/Group 12@1X.png">
+             <img src="Img/first.png">
+           
               </div>
-              <div class="col-lg-10">
-             
-               </div>
-             </div>
-        </div>
-
-          <div class="col-lg-3">
-            <div class="card">
-             
-              <div class="col-lg-2 cardimg_style">
-                <img src="Img/Layer 1359@1X.png">
+              <div class="col-lg-9 col-9 bg_blue">
+              <div class="">              
               </div>
-              <div class="col-lg-10">
-             
-               </div>
-             </div>
+              </div>  
+                              
+           </div>
           </div>
-         </div>      
+        </div>   
+       </div>  
 
-      
-
-       <div class="container">
-       <div class="row">
-        <div class="col-lg-4 second_section">
-        <h5> Analysis </h5>
+       <div class="container bg_white">
         <div class="row">
-        <div class="col-lg-4 face_style">
-          <img src="Img/NEG.@1X.png">
+          <div class="col-lg-12">
+            
+               Analytics <span class="round4 text-center mt-2"> 3 </span>
+                   
+          </div> 
+          <div class="col-lg-4 second_section">           
+          <div class="row">
+          <div class="col-lg-4 col-4 face_style">
+            <img src="Img/NEG.@1X.png">
+          </div>
+          <div class="col-lg-4 col-4 face_style">
+            <img src="Img/NEUTRAL@1X.png">
+          </div>
+          <div class="col-lg-4 col-4 face_style">
+            <img src="Img/POS.@1X.png">
+          </div>
+          </div>
+          </div>
+          <div class="col-lg-4 second_section">
+            <div id="chartContainer" style="height: 250px; width: 100%;"></div>
+          </div>
+          <div class="col-lg-4 second_section">      
+            
+            <button type="button" class="btn btn-light">Light</button>
+            <button type="button" class="btn btn-light">Light</button>
+            <button type="button" class="btn btn-light">Light</button>
+            <button type="button" class="btn btn-light">Light</button>
+             <button type="button" class="btn btn-light">Light</button>
+            
+
+          </div>
+          </div>
+       </div>
+
+    
+       <div class="container bg_white">
+      <div class="row">
+        <div class="col-lg-4 third_section">
+         <div class="row">
+           <div class="col-lg-6 col-6"> 
+              <div class="man_bg p-5 pl-5">
+              <img src="Img/man@1X.png">  
+              </div>        
+           </div>
+           <div class="col-lg-6 col-6">  
+            <div class="woman_bg p-5 pl-5">
+            <img src="Img/woman@1X.png">
+          </div>              
+          </div>
+         </div>
         </div>
-        <div class="col-lg-4 face_style">
-          <img src="Img/NEUTRAL@1X.png"
+        <div class="col-lg-4 third_section S2_style">
+          <img src="Img/DWELL T.@1X.png">
         </div>
-        <div class="col-lg-4 face_style">
-          <img src="Img/POS.@1X.png"
+        <div class="col-lg-4 third_section">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Crowd</th>
+                  <th scope="col">Heading</th>
+                  <th scope="col">Heading</th>
+              </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Cell</td>
+                  <td>Cell</td>
+               
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Cell</td>
+                  <td>Cell</td>
+               
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Cell</td>
+                  <td>Cell</td>
+       
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Cell</td>
+                  <td>Cell</td>
+                 
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
         </div>
-        
+       </div>
+
+      <div class="container bg_white">
+      <div class="row">
+        <div class="col-lg-12">
+            
+          Nationality <span class="round4 text-center mt-2"> 3 </span>
+              
+     </div> 
+        <div class="col-lg-8 fourth_section">
+          <div class="table-responsive">
+
+            <!--Table-->
+            <table class="table">
+          
+              <!--Table head-->
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th class="th-lg">Lorem ipsum dolor</th>
+                  <th class="th-lg">Lorem ipsum dolor</th>
+                  <th class="th-lg">Lorem ipsum dolor</th>
+                </tr>
+              </thead>
+              <!--Table head-->
+          
+              <!--Table body-->
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Lorem ipsum dolor</td>
+                  <td>Lorem ipsum dolor</td>
+                  <td>Lorem ipsum dolor</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Lorem ipsum dolor</td>
+                  <td>Lorem ipsum dolor</td>
+                  <td>Lorem ipsum dolor</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Lorem ipsum dolor</td>
+                  <td>Lorem ipsum dolor</td>
+                  <td>Lorem ipsum dolor</td>
+                </tr>
+              </tbody>
+              <!--Table body-->
+          
+            </table>
+            <!--Table-->
+          
+          </div>
         </div>
-        <div class="col-lg-4 second_section">
-          nkjhb
-        </div>
-        <div class="col-lg-4 second_section">
-          bnhgbnjhgvbnjhb
+        <div class="col-lg-4 fourth_section">
+          <div id="chartContainer" style="height: 370px; width: 100%;"></div>
         </div>
         </div>
+       </div>
+   
+       <div class="footer_style bg_grey">
+       <img src="Img/Aqomi_Logo_Pink_Web_Small@1X (1).png">
+       </div>
+     
       </div>
      </div>
-      
-
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 third_section">
-            hbnjkhjgv
-          </div>
-          <div class="col-lg-4 third_section">
-            nkjhb
-          </div>
-          <div class="col-lg-4 third_section">
-            bnhgbnjhgvbnjhb
-          </div>
-          </div>
-      </div>
-    
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 fourth_section">
-            hbnjkhjgv
-          </div>
-          <div class="col-lg-4 fourth_section">
-            nkjhb
-          </div>
-          <div class="col-lg-4 fourth_section">
-            bnhgbnjhgvbnjhb
-          </div>
-          </div>
-      </div>
-
-
-
-
     </div>
-    </div>
-
-    
-
-
-
-  </div>
-
-
-
-
-
-
-
-<script>
-  window.onload = function () {
-          DisplayCurrentTime();
-      };
-      function DisplayCurrentTime() {
-          var date = new Date();
-          var hours = date.getHours() > 12 ? date.getHours() - 12 : date.getHours();
-          var am_pm = date.getHours() >= 12 ? "PM" : "AM";
-          hours = hours < 10 ? "0" + hours : hours;
-          var minutes = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
-          var seconds = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
-          time = hours + ":" + minutes + ":" + seconds + " " + am_pm;
-          var lblTime = document.getElementById("date");
-          lblTime.innerHTML = time;
-      };  
-  </script>
-
+       
 
 
 <!-- <div class="container-fluid">
@@ -269,13 +506,14 @@ document.getElementById('date').innerHTML=time; -->
 
          
 
-<!-- <script>
+ <script>
     $(document).ready(function (){
      $('#sidebarCollapse').on('click', function () {
      $('#sidebar').toggleClass('active');
   });
   });
- </script> -->
+
+</script> 
 
   <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -293,65 +531,7 @@ document.getElementById('date').innerHTML=time; -->
             $('a[aria-expanded=true]').attr('aria-expanded', 'false');
           });
         });
-      </script>
-
-
-
-
-
-
-
-
-
-        <!-- Sidebar  -->
-        <!-- <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3>Bootstrap Sidebar</h3>
-                <strong>BS</strong>
-            </div>
-    
-            <ul class="list-unstyled components">
-                <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fas fa-home"></i>
-                        Home
-                    </a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Home 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 3</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-briefcase"></i>
-                        About
-                    </a>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fas fa-copy"></i>
-                        Pages
-                    </a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>    
-        </nav> -->
-    
+      </script>  
 </body>
 </hmtl>
 

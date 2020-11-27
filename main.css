@@ -7,7 +7,7 @@
 *,body{
     padding: 0px;
     margin: 0px;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 .app-header{
   box-shadow: 0px 0px 9.49px 3.49px rgba(0,0,0,0.2)!important;
@@ -15,8 +15,24 @@
 }
 
 
+.woman_bg
+{
+background-color: rgb(221, 221, 221);
+border-bottom: 10px solid hotpink;
+border-radius: 20px;
+}
 
+.man_bg{
 
+background-color: rgb(221, 221, 221);
+border-bottom: 10px solid #529bd4;
+border-radius: 20px;
+}
+
+.bg_white
+{
+  background-color: white;
+}
 
 .card1_img
 {
@@ -50,9 +66,6 @@
   height: 100%;
 }
 
-
-
-
 .img_style
 {
   margin-left: 15px;
@@ -81,18 +94,27 @@
 
 
 .second_section{
-  height: 240px;
+  height: 260px;
 }
 
 .third_section{
-  height: 240px;
+  height: 280px;
+  margin-top: 35px;
+  margin-right: 0px;
 }
+
+
+.cal_style
+{
+
+
+}
+
 
 .fourth_section
 {
   height: 240px;
 }
-
 
 .card
 {
@@ -102,6 +124,20 @@
   margin-left: 5px;
   margin-right: 5px;
   
+}
+
+.S2_style
+{
+    
+  padding: 0px;
+  padding-left: 120px;
+  padding-top: 40px;
+
+}
+
+.footer_style
+{
+  margin-left: 40%;
 }
 
  .cardimg_style
@@ -114,10 +150,10 @@
 
 .face_style
 {
-margin-top: 70px;
+margin-top: 60px;
 margin-bottom: 5px;
-margin-left: 40px;
-margin-right: 5px;
+margin-left: 0px;
+margin-right: 0px;
 }
 
 .card2_style
@@ -126,20 +162,62 @@ margin-right: 5px;
 
 }
 
-.card_bg
+.border_10
+{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.bg_blue{
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.bg_blue
 {
   background-color: #4c90c5;
-  height: 70px;
 }
-
 
 .txt_style
-{
- 
+{ 
 display: inline-block;
+}
 
+.round4
+{
+  background-color: #f40bb2;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 24px;
+  margin-left: 10px;
+  display: inline-block;
+  text-align: center;
+  display: inline-block;
+}
+
+.button
+{
+  border-radius: 25px;
+  width: 100%;
+  height: 100%;
 
 }
+
+.btn
+{
+  border-radius: 30px !important;
+  width: 50%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 5px ;
+  margin-bottom: 5px ;
+  margin-left: 100px;
+  border: 1px solid  
+
+}
+
 
 .round3{
   background-color: #000;
@@ -148,13 +226,11 @@ display: inline-block;
   border-radius: 100%;
   text-align: center;
   line-height: 34px;
-  display: inline-block;
-  
+  display: inline-block; 
 }
 
 .icon_style
 {
-
   margin-top: 15px;
   margin-bottom: 15px;
   margin-left: 10px;
@@ -630,7 +706,7 @@ CONTENT STYLE
 MEDIAQUERIES
 ----------------------------------------------------- */
 
-@media (max-width: 768px) {
+@media (min-width:768px) and (max-width: 991px) {
   #sidebar {
     margin-left: -250px;
   }
@@ -654,6 +730,9 @@ MEDIAQUERIES
   }
   .textcen_mob{
     text-align: center;
+  }
+  .mb_bottom{
+    margin-bottom: 20px;
   }
 }
 .bg_grey{
