@@ -14,12 +14,30 @@
   background-color: #fff;
 }
 
+.br4_table
+{
+
+border-right: 1px solid #000;
+
+}
+
+.drop3 
+{
+
+border: 1px solid #000;
+
+}
 
 .woman_bg
 {
 background-color: rgb(221, 221, 221);
 border-bottom: 10px solid hotpink;
 border-radius: 20px;
+padding-left: 20px;
+padding-right: 20px;
+padding-top: 20px;
+padding-bottom: 20px;
+display: inline-block;
 }
 
 .man_bg{
@@ -27,7 +45,14 @@ border-radius: 20px;
 background-color: rgb(221, 221, 221);
 border-bottom: 10px solid #529bd4;
 border-radius: 20px;
+display: inline-block;
+padding-left: 25px;
+padding-right: 25px;
+padding-top: 20px;
+padding-bottom: 20px;
+display: inline-block;
 }
+
 
 .bg_white
 {
@@ -92,11 +117,66 @@ border-radius: 20px;
   color: #fff;
 }
 
-
+.bg_none{
+  background: transparent;
+  border: 1px solid #ced4da;
+  border-radius: 50px;
+  color: #ced4da;
+  padding-right:20px;
+}
 .second_section{
   height: 260px;
 }
 
+
+.face_text
+{
+
+font-size: 25px;
+padding-left: 10px;
+margin-top: 15px;
+
+
+}
+.lit_btn button{
+  background: transparent;
+  border: 1px solid #ced4da;
+  border-radius: 50px;
+}
+.lit_btn .wid90{
+  width: 90%;
+}
+
+
+.lit_btn .wid90:hover
+{
+ 
+  background-color: #4c8fc4;
+  color: white;
+}
+
+
+.br_analytic
+{
+
+  border-right: 3px solid #000;
+}
+
+.br_male
+{
+
+
+  border-right: 3px solid #000;
+
+}
+
+
+.dropdown-toggle::after{
+  right: 6px!important;
+}
+.drop2 .dropdown-toggle::after{
+  right: 6px!important;
+}
 .third_section{
   height: 280px;
   margin-top: 35px;
@@ -202,20 +282,79 @@ display: inline-block;
   border-radius: 25px;
   width: 100%;
   height: 100%;
-
 }
 
-.btn
+.cardblue_style
 {
-  border-radius: 30px !important;
-  width: 50%;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-top: 5px ;
-  margin-bottom: 5px ;
-  margin-left: 100px;
-  border: 1px solid  
+display: inline-flex;
+align-items: center;
+padding: 14px 0px 14px 0px;
+}
 
+.side_button
+{
+border-radius: 50%;
+border: 1px solid #000;
+}
+
+
+
+.bg_search{
+  background-color: transparent;
+  border-right: 1px solid #ced4da;
+  border-bottom:1px solid #ced4da;
+  border-top: 1px solid #ced4da;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+.bg_search i::before{
+  color:#ced4da;
+}
+
+#mySidenav a {
+  position: absolute;
+  left: -80px;
+  transition: 0.1s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  left: 0;
+}
+
+#computer {
+  top: 20px;
+  background-color: #f40bb2;
+}
+
+#message {
+  top: 80px;
+  background-color:  #f40bb2;
+}
+
+#connection {
+  top: 140px;
+  background-color:  #f40bb2;
+}
+
+#setting {
+  top: 200px;
+  background-color:  #f40bb2;
+}
+
+
+
+.card_text
+{  
+  color: white;
+  font-size: 40px;
+  line-height: 50px;
+  margin-bottom: 0px;
 }
 
 
@@ -286,12 +425,16 @@ select{
   width: 30%;
  
 }
-
+.wid90 input{
+  border-radius: 100px;
+  border-right: none;
+}
 .icon1-style
 {
-  margin-top: 25px;
-  margin-left: 35px;
+
+  margin-left: 25px;
   text-align: left;
+  margin-right: 25px;
 }
 
 .container{
@@ -357,20 +500,54 @@ input{
     border-radius: 20px;
     padding: 0 20px;
 }
+/* Styles for wrapping the search box */
 
-.fa{
-    box-sizing: border-box;
-    padding: 10px;
-    width: 42.5px;
-    height: 42.5px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-radius: 50%;
-    color: #07051a;
-    text-align: center;
-    font-size: 1.2em;
-    transition: all 1s;
+.main {
+  width: 50%;
+  margin: 50px auto;
+}
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+.wid90{
+  width: 45%;
+}
+
+.topbtn_style
+{
+ 
+border-radius: 50px;
+
+}
+
+.man_style
+{
+font-size: 40px;  
+padding-left: 35px;
+}
+
+
+
+.icons_style
+{
+  font-size: 1rem;
+  margin-left: 326px;
+  display: inline-flex;
 }
 
 form:hover{
