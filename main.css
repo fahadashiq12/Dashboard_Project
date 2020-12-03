@@ -161,7 +161,13 @@ margin-top: 15px;
   color: white;
 }
 
+.img_size
+{
+  max-width: 100%;
+  margin-left: 45px;
+  margin-top: 66px;
 
+}
 .br_analytic
 {
 
@@ -173,9 +179,14 @@ margin-top: 15px;
 
 
   border-right: 3px solid #000;
+  height: 8 0%;
+  margin-right: 5px;
 
 }
 
+div#chartContainerline {
+  display: none;
+}
 
 .dropdown-toggle::after{
   right: 6px!important;
@@ -213,12 +224,10 @@ margin-top: 15px;
 }
 
 .S2_style
-{
-    
+{    
   padding: 0px;
   padding-left: 120px;
   padding-top: 40px;
-
 }
 
 .footer_style
@@ -268,7 +277,17 @@ margin-right: 0px;
 .txt_style
 { 
 display: inline-block;
+white-space: nowrap;
+padding-left: 5px; 
 }
+
+.txt2_style
+{ 
+display: inline-block;
+white-space: nowrap;
+padding-left: 12px; 
+}
+
 
 .round4
 {
@@ -305,6 +324,22 @@ border: 1px solid #000;
 }
 
 
+.firstimg_style
+{
+
+max-width: 100%;
+min-width: 100%;
+padding-left: 15px;
+
+}
+
+
+.side_back
+{
+
+background-color: white;
+
+}
 
 .bg_search{
   background-color: transparent;
@@ -320,7 +355,7 @@ border: 1px solid #000;
 
 #mySidenav a {
   position: absolute;
-  left: -80px;
+  left: -70px;
   transition: 0.1s;
   padding: 15px;
   width: 100px;
@@ -336,6 +371,7 @@ border: 1px solid #000;
 
 #computer {
   top: 20px;
+  border-radius: 25px;
   background-color: #f40bb2;
 }
 
@@ -351,7 +387,7 @@ border: 1px solid #000;
 
 #setting {
   top: 200px;
-  background-color:  #f40bb2;
+  background-color: img;
 }
 
 
@@ -396,13 +432,52 @@ border: 1px solid #000;
   text-align: center;
   line-height: 34px;
   display: inline-block;
+  margin-left: 20px;
+
+}
+
+.menu_style
+{
+ padding-left: 15px;
+ padding-top: 100px;
+}
+
+.menu img:hover
+{
+
+  border-right: 2px solid #f40bb2;
+
+
 
 }
 
 
+.menu-txt
+{
+
+  position: absolute;
+  left: 65px;
+  z-index: 99;
+  top: 0px;
+  color: white;
+  background: rgb(255, 253, 253);
+  height: 70px;
+  padding-left: 70px;
+  white-space: nowrap;
+  border-right: 5px solid #f40bb2;
+  padding-top: 22px;
+  padding-left: 22px;
+  padding-right: 22px;
+  
+
+}
 
 
-
+.menu
+{
+  position: relative;
+  background-color: red;
+}
 
 .profile
 {
@@ -629,6 +704,7 @@ a[data-toggle="collapse"] {
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
+    margin-left: 17px;
 }
 
 
