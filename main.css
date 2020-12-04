@@ -702,6 +702,32 @@ a[data-toggle="collapse"] {
     }
 }
 
+
+@media (max-width: 576px) {
+  .side_back 
+  {
+     display: none;
+  }
+
+  .app-header
+  {
+      display: inline-block;      
+  }
+
+  .input-group
+  {
+    display: none;
+  }
+  
+  .second_menu
+  {
+    display: none;
+  }
+}
+
+
+
+
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
 
