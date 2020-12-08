@@ -7,12 +7,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
         <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">       
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
-        <script>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+        <!-- <script src="https://www.jsdelivr.com/package/npm/chart.js?path=dist"></script> -->
+       
+       <script>        
         window.onload = function () 
         {
           
@@ -149,10 +151,9 @@
     };
     $("#chartContainer").CanvasJSChart(options);
     }
-        </script>
-
-        <link rel="stylesheet" type="text/css" href="main.css">      
+       </script>
        
+        <link rel="stylesheet" type="text/css" href="main.css">             
         <title>
             Dashboard Project
         </title>
@@ -186,14 +187,14 @@
                 
                   <img src="Img/setting.png" alt="" class="round1 mr-2">
                 
-                <span class="round2 mr-2">
+                <span class="round2 mr-2 mobile_round">
                   7
                 </span>
-                <span class="round3">
+                <span class="round3 mobile_round">
                   <span>7</span>
                 </span>
              </div>
-             <div class="col-lg-3 col-4 second_menu">
+             <div class="col-lg-3 col-4 second_menu mobile_round">
                 <select name="" id="">
                   <option value="fahad">fahad</option>
                   <option value="sami">sami</option>
@@ -207,9 +208,9 @@
          </div>
       </div>
     </div>
-        </div>
+  </div>
       
-        <!---- SideBar ---->  
+      <!---- SideBar ---->  
       <div class="container-fluid"> 
         <div class="row">
         <div class="col-lg-1 col-12 bg_white">
@@ -268,19 +269,20 @@
          </div> -->
         </div>
       </div>
+     
     <!----  Body Section ---->  
+
     <div class="col-lg-11 bg_grey">
     
     <div class="row">
-    <div class="col-lg-2 col-12">
+     <div class="col-lg-2 col-12">
       <div class="row">
         <span class="cal_style mt-4 ml-4">
           <img class="firstimg_style" src="Img/Calender Icon@1X.png">
           <h6 class="pl-4 mt-2 text-center"> ALBERTA, CA </h6>             
-          </span>
-         </div>  
+        </span>
+      </div>  
     </div>  
-
 
     <div class="col-lg-10">
     <!---- First Section ---->       
@@ -490,9 +492,9 @@
             </div>
 
             <div class="row  mr-3">
-              <div class="col-lg-12 mt-3 text-center">
-                <div class="row br_male mt-5" style="">  
-                         <img class="img_size" src="Img/CIRCLE.png">    
+              <div class="col-lg-12 col-12 mt-3 text-center">
+                <div class="row br_male mt-5" style="img_mobile">  
+                         <img class="img_size img_mobile" src="Img/CIRCLE.png">    
                 </div>
             </div>
           </div>
@@ -631,43 +633,8 @@
             </div>
 
             <div class="row">
-              <div class="table-responsive mt-5 br_male">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">Crowd</th>
-                      <th scope="col">Heading</th>
-                      <th scope="col">Heading</th>
-                   </tr>
-                  </thead>
-                      <th scope="row">1</th>
-                      <td>Cell</td>
-                      <td>Cell</td>
-                   
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Cell</td>
-                      <td>Cell</td>
-                   
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Cell</td>
-                      <td>Cell</td>
-           
-                    </tr>
-                    <tr>
-                  <tbody>
-                    <tr>
-                      <th sco
-                      <th scope="row">4</th>
-                      <td>Cell</td>
-                      <td>Cell</td>
-                     
-                    </tr>
-                  </tbody>
-                </table>
+              <div id="container" style="width: 75%;">
+                <canvas id="canvas"></canvas>
               </div>
             </div>
             
@@ -685,8 +652,30 @@
     </div>
     </div>
     </div>
-    
+   
+
     <script>
+    function openNav() 
+    { 
+      document.getElementById("mySidebar").style.transform = "translatex(0px)";
+      document.getElementById("main").style.transform = "translatex(0px)";
+      document.getElementById("line").classList.add("d-non");
+      document.getElementById("cross").classList.add("d-show");
+      document.getElementById("line").classList.remove("d-show"); 
+    }
+    
+    function closeNav() 
+    {
+      document.getElementById("mySidebar").style.transform = "translatex(-250px)";
+      // document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.transform = "translatex(-250px)";
+      document.getElementById("cross").classList.add("d-non");
+      document.getElementById("line").classList.add("d-show");
+      document.getElementById("cross").classList.remove("d-show");
+    } 
+  </script>
+
+  <script>
     $(document).ready(function (){
      $('#sidebarCollapse').on('click', function () {
      $('#sidebar').toggleClass('active');
@@ -714,5 +703,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    </body>
+    
+  </body>
 </hmtl>
